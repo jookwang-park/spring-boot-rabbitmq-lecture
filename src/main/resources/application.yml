@@ -1,0 +1,16 @@
+spring:
+  rabbitmq:
+    host: b-ac190fc1-eb08-4b00-ad7c-3fe0bb59a648.mq.ap-northeast-2.amazonaws.com
+    port: 5671
+    username: step
+    password: vestamq!@123
+    virtual-host: /test
+    template:
+      retry:
+        enabled: true
+        initial-interval: 2s
+    ssl:
+      enabled: true
+    listener:
+      simple:
+        acknowledge-mode: manual
